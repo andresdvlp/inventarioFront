@@ -9,9 +9,28 @@ export class RestService {
 
   Url = 'http://localhost:8080/';
 
-  public async get(controller: string) {
+  public get(controller: string) {
+    return this.api.get(this.Url + controller);
+  }
+  public async post(controller: string, body: any) {
     await this.api
       .get(this.Url + controller)
+      .toPromise()
+      .then((res) => {
+        console.log(res);
+      });
+  }
+  public async put(controller: string, body: any, id: number) {
+    await this.api
+      .get(this.Url + controller + '/' + id + body)
+      .toPromise()
+      .then((res) => {
+        console.log(res);
+      });
+  }
+  public async delete(controller: string, id: number) {
+    await this.api
+      .get(this.Url + controller + '/' + id)
       .toPromise()
       .then((res) => {
         console.log(res);

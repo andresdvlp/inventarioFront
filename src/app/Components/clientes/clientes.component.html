@@ -1,1 +1,40 @@
-<p>clientes works!</p>
+<mat-table [dataSource]="dataSource">
+  <!-- Columnas -->
+  <ng-container matColumnDef="idCliente">
+    <mat-header-cell *matHeaderCellDef> ID Cliente </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.idCliente}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nombreCliente">
+    <mat-header-cell *matHeaderCellDef> Nombre Cliente </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.nombreCliente}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="apellidoCliente">
+    <mat-header-cell *matHeaderCellDef> Apellido Cliente </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.apellidoCliente}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="celularCliente">
+    <mat-header-cell *matHeaderCellDef> Celular Cliente </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.celularCliente}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="correoCliente">
+    <mat-header-cell *matHeaderCellDef> Correo Cliente </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.correoCliente}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="acciones">
+    <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Filas -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator #paginator [pageSizeOptions]="[1, 2, 30]" showFirstLastButtons></mat-paginator>

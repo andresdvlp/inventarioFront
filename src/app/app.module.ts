@@ -16,9 +16,23 @@ import { ProductosComponent } from './Components/productos/productos.component';
 import { ProveedoresComponent } from './Components/proveedores/proveedores.component';
 import { ClientesComponent } from './Components/clientes/clientes.component';
 import { VentasComponent } from './Components/ventas/ventas.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormularioComponent } from './Components/clientes/formulario/formulario.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, MenuComponent, ProductosComponent, ProveedoresComponent, ClientesComponent, VentasComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    ProductosComponent,
+    ProveedoresComponent,
+    ClientesComponent,
+    VentasComponent,
+    FormularioComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +44,12 @@ import { VentasComponent } from './Components/ventas/ventas.component';
     MatListModule,
     AvatarModule,
     HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

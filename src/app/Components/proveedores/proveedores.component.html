@@ -1,1 +1,41 @@
-<p>proveedores works!</p>
+<mat-table [dataSource]="dataSource">
+  <!-- Columnas -->
+  <ng-container matColumnDef="idProveedor">
+    <mat-header-cell *matHeaderCellDef> ID Proveedor </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.idProveedor}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nombreEmpresa">
+    <mat-header-cell *matHeaderCellDef> Nombre Empresa </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.nombreEmpresa}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nombreProveedor">
+    <mat-header-cell *matHeaderCellDef> Nombre Proveedor </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.nombreProveedor}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="direccionProveedor">
+    <mat-header-cell *matHeaderCellDef> Dirección Proveedor </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.direccionProveedor}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="celularProveedor">
+    <mat-header-cell *matHeaderCellDef> Celular </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.celularProveedor}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="acciones">
+    <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Filas -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator #paginator [pageSizeOptions]="[5, 10, 30]" showFirstLastButtons></mat-paginator>
+
