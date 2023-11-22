@@ -4,4 +4,5 @@ export interface Cliente {
   apellidoCliente: string;
   celularCliente: number;
   correoCliente: string;
+  deleted:boolean;
 }

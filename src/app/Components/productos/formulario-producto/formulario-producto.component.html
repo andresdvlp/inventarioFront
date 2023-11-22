@@ -1,0 +1,26 @@
+<h2>Agregar Producto</h2>
+<hr />
+<div class="formulario">
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Producto</mat-label>
+      <input matInput formControlName="nombreProducto" placeholder="Producto">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descripcion</mat-label>
+      <input matInput formControlName="descripcion" placeholder="Descripcion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Precio Unitario</mat-label>
+      <input matInput formControlName="precioUnitario" placeholder="Precio Unitario">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Cantidad Disponible</mat-label>
+      <input matInput formControlName="cantidadDisponible" placeholder="Cantidad">
+    </mat-form-field>
+  </form>
+</div>
+<button mat-raised-button color="primary" type="submit">Agregar</button>

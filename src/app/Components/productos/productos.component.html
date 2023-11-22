@@ -24,11 +24,18 @@
     <mat-header-cell *matHeaderCellDef> Cantidad Disponible </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.cantidadStock}} </mat-cell>
   </ng-container>
+  
   <ng-container matColumnDef="acciones">
     <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
     <mat-cell *matCellDef="let element">
       <button mat-icon-button (click)="openDialog()">
         <mat-icon>add</mat-icon>
+      </button>
+      <button mat-icon-button color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn">
+        <mat-icon>delete</mat-icon>
       </button>
     </mat-cell>
   </ng-container>
@@ -37,5 +44,4 @@
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
-<mat-paginator #paginator [pageSizeOptions]="[5, 10, 30]" showFirstLastButtons></mat-paginator>
-
+<mat-paginator #paginator [pageSizeOptions]="[1, 2, 30]" showFirstLastButtons></mat-paginator>

@@ -5,7 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { RestService } from 'src/app/Services/rest.service';
-import { FormularioComponent } from '../clientes/formulario/formulario.component';
+import { FormularioProductoComponent } from './formulario-producto/formulario-producto.component';
 
 @Component({
   selector: 'app-productos',
@@ -40,7 +40,7 @@ export class ProductosComponent {
     });
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(FormularioComponent);
+    const dialogRef = this.dialog.open(FormularioProductoComponent);
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

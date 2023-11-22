@@ -1,22 +1,26 @@
-<h2>Crear Usuario</h2>
-<form [formGroup]="form">
-  <mat-form-field>
-    <mat-label>Nombre Cliente</mat-label>
-    <input matInput formControlName="nombreCliente" placeholder="Nombre Cliente">
-  </mat-form-field>
+<h2>Agregar Cliente</h2>
+<hr />
+<div class="formulario">
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Cliente</mat-label>
+      <input matInput formControlName="nombreCliente" placeholder="Nombre Cliente">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Apellido Cliente</mat-label>
-    <input matInput formControlName="apellidoCliente" placeholder="Apellido Cliente">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido Cliente</mat-label>
+      <input matInput formControlName="apellidoCliente" placeholder="Apellido Cliente">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Celular Cliente</mat-label>
-    <input matInput formControlName="celularCliente" placeholder="Celular Cliente">
-  </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Celular Cliente</mat-label>
+      <input matInput formControlName="celularCliente" placeholder="Celular Cliente">
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Correo Cliente</mat-label>
-    <input matInput formControlName="correoCliente" placeholder="Correo Cliente">
-  </mat-form-field>
-</form>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo Cliente</mat-label>
+      <input matInput formControlName="correoCliente" placeholder="Correo Cliente">
+    </mat-form-field>
+  </form>
+</div>
+<button mat-raised-button color="primary" type="submit">Agregar</button>

@@ -6,6 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { RestService } from 'src/app/Services/rest.service';
 import { FormularioComponent } from '../clientes/formulario/formulario.component';
+import { FormularioProveedorComponent } from './formulario-proveedor/formulario-proveedor.component';
 
 @Component({
   selector: 'app-proveedores',
@@ -19,6 +20,7 @@ export class ProveedoresComponent {
     'nombreProveedor',
     'direccionProveedor',
     'celularProveedor',
+    'acciones'
   ];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -39,7 +41,7 @@ export class ProveedoresComponent {
     this.api.get('proveedor');
   }
   openDialog(): void {
-    const dialogRef = this.dialog.open(FormularioComponent);
+    const dialogRef = this.dialog.open(FormularioProveedorComponent);
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);

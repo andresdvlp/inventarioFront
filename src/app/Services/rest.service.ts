@@ -29,11 +29,9 @@ export class RestService {
       });
   }
   public async delete(controller: string, id: number) {
-    await this.api
-      .get(this.Url + controller + '/' + id)
-      .toPromise()
-      .then((res) => {
-        console.log(res);
-      });
+    const res = await this.api
+      .delete(this.Url + controller + '/' + id)
+      .toPromise();
+    console.log(res);
   }
 }

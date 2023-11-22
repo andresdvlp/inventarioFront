@@ -1,0 +1,26 @@
+<h2>Agregar Proveedor</h2>
+<hr />
+<div class="formulario">
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Proveedor</mat-label>
+      <input matInput formControlName="nombreProveedor" placeholder="Nombre Proveedor">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Empresa</mat-label>
+      <input matInput formControlName="nombreEmpresa" placeholder="Nombre Empresa">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Direccion Proveedor</mat-label>
+      <input matInput formControlName="direccionProveedor" placeholder="Direccion Proveedor">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Celular</mat-label>
+      <input matInput formControlName="celularProveedor" placeholder="Celular">
+    </mat-form-field>
+  </form>
+</div>
+<button mat-raised-button color="primary" type="submit">Agregar</button>

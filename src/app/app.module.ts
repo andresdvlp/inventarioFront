@@ -23,6 +23,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormularioComponent } from './Components/clientes/formulario/formulario.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { FormularioProductoComponent } from './Components/productos/formulario-producto/formulario-producto.component';
+import { FormularioProveedorComponent } from './Components/proveedores/formulario-proveedor/formulario-proveedor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClientesComponent,
     VentasComponent,
     FormularioComponent,
+    FormularioProductoComponent,
+    FormularioProveedorComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatDialogModule,
     ReactiveFormsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
